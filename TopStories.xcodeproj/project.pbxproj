@@ -12,6 +12,7 @@
 		B54009A120F5033500CB5006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B540099F20F5033500CB5006 /* Main.storyboard */; };
 		B54009A320F5033600CB5006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54009A220F5033600CB5006 /* Assets.xcassets */; };
 		B54009A620F5033600CB5006 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54009A420F5033600CB5006 /* LaunchScreen.storyboard */; };
+		B54009AE20F505A100CB5006 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54009AD20F505A100CB5006 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		B54009A220F5033600CB5006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B54009A520F5033600CB5006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B54009A720F5033600CB5006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B54009AD20F505A100CB5006 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				B54009A220F5033600CB5006 /* Assets.xcassets */,
 				B54009A420F5033600CB5006 /* LaunchScreen.storyboard */,
 				B54009A720F5033600CB5006 /* Info.plist */,
+				B54009AD20F505A100CB5006 /* SwiftyJSON.swift */,
 			);
 			path = TopStories;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B54009AE20F505A100CB5006 /* SwiftyJSON.swift in Sources */,
 				B540099E20F5033500CB5006 /* SourcesViewController.swift in Sources */,
 				B540099C20F5033500CB5006 /* AppDelegate.swift in Sources */,
 			);
