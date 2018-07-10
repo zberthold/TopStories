@@ -18,16 +18,19 @@ class SourcesViewController: UITableViewController {
         super.viewDidLoad()
         self.title = "News Sources"
         let query = "https://newsapi.org/v1/sources?language=en&country=us&apiKey=\(apiKey)"
+        DispatchQueue.global(qos: .userInitiated).async {
+            [unowned self] in
         if let url = URL(string: query) {
             if let data = try? Data(contentsOf: url) {
                 let json = try! JSON(data: data)
                 if json["status"] == "ok" {
-                    parse(json: json)
+                    self.parse(json: json)
                     return
                 }
             }
         }
-        loadError()
+        self.loadError()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,7 +45,10 @@ class SourcesViewController: UITableViewController {
             let source = ["id":id, "name":name, "description":description]
             sources.append(source)
         }
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            [unowned self] in
+            self.tableView.reloadData()
+        }
     }
     
     func loadError (){
@@ -50,7 +56,7 @@ class SourcesViewController: UITableViewController {
                                       message: "There was a problem loading the news feed",
                                       preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
